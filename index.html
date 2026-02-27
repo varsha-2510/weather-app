@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocify Weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+</head>
+<body>
+
+<div class="card">
+    <p class="app-title">⛅ Weather App</p>
+
+    <div class="search">
+        <input type="text" id="cityInput" placeholder="Search Indian city..." spellcheck="false">
+        <button id="searchBtn">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+        </button>
+    </div>
+
+    <div class="error" id="errorBox">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span id="errorMsg">City not found. Please try again.</span>
+    </div>
+
+    <div class="loading" id="loadingBox">
+        <div class="spinner"></div>
+        Fetching weather...
+    </div>
+
+    <div class="weather" id="weatherBox">
+        <div class="weather-top">
+            <img id="weatherIcon" class="weather-icon" src="" alt="weather icon">
+            <div class="temp" id="temp">--°C</div>
+        </div>
+        <div class="city" id="cityName">--</div>
+        <div class="country-date" id="countryDate">--</div>
+        <div class="description" id="desc">--</div>
+        <div class="feels" id="feelsLike">--</div>
+
+        <hr class="divider">
+
+        <div class="details">
+            <div class="detail-box">
+                <i class="fa-solid fa-wind"></i>
+                <div class="val" id="windSpeed">--</div>
+                <div class="label">Wind</div>
+            </div>
+            <div class="detail-box">
+                <i class="fa-solid fa-droplet"></i>
+                <div class="val" id="humidity">--</div>
+                <div class="label">Humidity</div>
+            </div>
+            <div class="detail-box">
+                <i class="fa-solid fa-eye"></i>
+                <div class="val" id="visibility">--</div>
+                <div class="label">Visibility</div>
+            </div>
+            <div class="detail-box">
+                <i class="fa-solid fa-gauge"></i>
+                <div class="val" id="pressure">--</div>
+                <div class="label">Pressure</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Indian Cities -->
+    <p class="quick-label">Quick Search</p>
+    <div class="quick-cities">
+        <button class="city-chip" onclick="quickSearch('Delhi')">Delhi</button>
+        <button class="city-chip" onclick="quickSearch('Mumbai')">Mumbai</button>
+        <button class="city-chip" onclick="quickSearch('Jaipur')">Jaipur</button>
+        <button class="city-chip" onclick="quickSearch('Bengaluru')">Bengaluru</button>
+        <button class="city-chip" onclick="quickSearch('Kolkata')">Kolkata</button>
+        <button class="city-chip" onclick="quickSearch('Hyderabad')">Hyderabad</button>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
